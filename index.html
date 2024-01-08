@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        
+        <!-- text on the top -->
+        <h1 class="header-text" lang="cn">我们要结婚了！</h1>
+        <h1 class="header-text" lang="en" style="display: none;">We're Getting Married!</h1>
+        <h1 class="header-text" lang="ko" style="display: none;">우리 결혼합니다!</h1>
+        <!-- names -->
+        <h1 class="header-main-text" lang="cn">潘悦 & 闵百基</h1>
+        <h1 class="header-main-text" lang="en" style="display: none;">Yue Pan & BaekGi Min</h1>
+        <h1 class="header-main-text" lang="ko" style="display: none;">판유에 & 민백기</h1>
+        <!-- date -->
+        <h1 class="header-date" lang="en" style="display: none;">2024 Spring (China) & 2025 Spring (US)</h1>
+        <h1 class="header-date" lang="cn">2024 春 (中国厦门) & 2025 夏 (美国纽约)</h1>
+        <h1 class="header-date" lang="ko" style="display: none;">2024 봄 (중국 샤먼) & 2025 여름 (미국 뉴욕)</h1>
+        <img src="images/header_image2.JPG" alt="Wedding Photo" class="header-photo">
+
+    
+    </header>
+
+    <div class="language-switch-container">
+        <!-- language switching -->
+        <form>
+            <label for="lang-switch">
+                <span lang="cn">中文</span>
+                <span lang="ko">언어</span>
+                <span lang="en">English</span>
+            </label>
+            <select id="lang-switch" onchange="changeLanguage()">
+                <option value="cn" selected>中文</option>
+                <option value="en">English</option>
+                <option value="ko">한국어</option>
+            </select>
+        </form>
+    </div>
+    <!-- navigation button in different languages -->
+    <nav>
+        <a href="#home" lang="cn">首页</a>
+        <a href="#about" lang="cn">关于我们</a>
+        <a href="#events" lang="cn">活动</a>
+        <a href="#gallery" lang="cn">相册</a>
+        <a href="#rsvp" lang="cn">RSVP</a>
+        <a href="#contact" lang="cn">联系我们</a>
+
+        <a href="#home" lang="en" style="display: none;">Home</a>
+        <a href="#about" lang="en" style="display: none;">About Us</a>
+        <a href="#events" lang="en" style="display: none;">Events</a>
+        <a href="#gallery" lang="en" style="display: none;">Gallery</a>
+        <a href="#rsvp" lang="en" style="display: none;">RSVP</a>
+        <a href="#contact" lang="en" style="display: none;">Contact</a>
+
+        <a href="#home" lang="ko" style="display: none;">홈</a>
+        <a href="#about" lang="ko" style="display: none;">우리에 대해</a>
+        <a href="#events" lang="ko" style="display: none;">이벤트</a>
+        <a href="#gallery" lang="ko" style="display: none;">갤러리</a>
+        <a href="#rsvp" lang="ko" style="display: none;">참석 응답</a>
+        <a href="#contact" lang="ko" style="display: none;">연락처</a>
+    </nav>
+    
+
+    <!-- section text -->
+   
+    <section id="home">
+        <div class="container">
+            <!-- Content for the home section based on language -->
+            <h2 id="welcome-cn" lang="cn">婚礼日期、地点和时间</h2>
+            <h2 id="welcome-en" lang="en" style="display: none;">Save the Dates, Venue, and Time</h2>
+            <h2 id="welcome-ko" lang="ko" style="display: none;">결혼식 날짜, 장소 및 시간</h2>
+            
+            <p id="celebrate-cn" lang="cn">我们的婚礼将于 2024 春季在中国厦门举行，2025 夏季在美国纽约举行。</p>
+            <p id="celebrate-en" lang="en" style="display: none;">We are excited to announce that our wedding will take place in Xiamen, China, in Spring 2024, and in New York, USA, in Summer 2025.</p>
+            <p id="celebrate-ko" lang="ko" style="display: none;">저희의 결혼식은 2024 봄에 중국 샤먼에서, 2025 여름에 미국 뉴욕에서 개최될 예정입니다.</p>
+            <!-- Dropdown for attendees to select the wedding location -->
+
+            
+            <label id="wedding-location-label-cn" lang="cn">选择婚礼地点：</label>
+            <label id="wedding-location-label-en" lang="en" style="display: none;">Select Wedding Location:</label>
+            <label id="wedding-location-label-ko" lang="ko" style="display: none;">결혼식 장소 선택:</label>
+
+            <select id="wedding-location" onchange="updateVenueInfo()">
+                <option value="cn" selected lang="cn">中国</option>
+                <option value="cn" lang="en" style="display: none;">China</option>
+                <option value="cn" lang="ko" style="display: none;">중국</option>
+                <option value="us" lang="cn">美国</option>
+                <option value="us" lang="en" style="display: none;">US</option>
+                <option value="us" lang="ko" style="display: none;">미국</option>
+            </select>
+
+            <!-- Container to display different data based on country selection -->
+            <div id="venue-info-container">
+                <div class="venue-cn-cn" lang="cn">
+                    <p>中国婚礼信息：</p>
+                    <p>日期：2024.04.12</p>
+                    <p>地点：厦门, 中国</p>
+                </div>
+                <div class="venue-cn-ko" lang="ko" style="display: none;">
+                    <p>중국결혼정보:</p>
+                    <p>날짜: 2024.04.12</p>
+                    <p>장소: 샤먼, 중국</p>
+                </div>
+                <div class="venue-cn-en" lang="en" style="display: none;">
+                    <p>Wedding in China Information:</p>
+                    <p>Date: 2024.04.12</p>
+                    <p>Venue: Xiamen, China</p>
+                </div>
+
+                <div class="venue-us-cn" lang="cn" style="display: none;">
+                    <p>美国婚礼信息：</p>
+                    <p>日期：2025 夏</p>
+                    <p>地点：纽约, 美国</p>
+                </div>
+                <div class="venue-us-ko" lang="ko" style="display: none;">
+                    <p>중국결혼정보:</p>
+                    <p>날짜: 2025 여름에</p>
+                    <p>장소: 뉴욕, 미국</p>
+                </div>
+                <div class="venue-us-en" lang="en" style="display: none;">
+                    <p>Wedding in US Information:</p>
+                    <p>Date: 2025 Summer</p>
+                    <p>Venue: New York, US</p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section id="about">
+        <h2 lang="cn">关于我们</h2>
+            <h2 lang="en" style="display: none;">About Us</h2>
+            <h2 lang="ko" style="display: none;">우리에 대해</h2>
+        <div class="left-container">            
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img id="circle_yue" src="images/circle_yue.JPG" alt="Yue" style="width:400px;height:400px">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2 id="about-bride-cn" lang="cn">关于新娘</h2>
+                    <h2 id="about-bride-en" lang="en" style="display: none;">About Yue</h2>
+                    <h2 id="about-bride-ko" lang="ko" style="display: none;">안녕, 제이름은 판유에 입니다</h2>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="right-container">
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img id="circle_baekgi"  src="images/circle_min.JPG" alt="BaekGi" style="width:400px;height:400px">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2 id="about-groom-cn" lang="cn">关于新郎</h2>
+            <h2 id="about-groom-en" lang="en" style="display: none;">About BaekGi</h2>
+            <h2 id="about-groom-ko" lang="ko" style="display: none;">안녕, 제이름은 민백기 입니다</h2>
+                  </div>
+                </div>
+              </div>
+    </section>
+
+    <section id="events">
+        <h2 lang="cn">活动</h2>
+        <h2 lang="en" style="display: none;">Events</h2>
+        <h2 lang="ko" style="display: none;">이벤트</h2>
+        <p lang="cn">婚礼活动和日程安排的详细信息。</p>
+        <p lang="en" style="display: none;">Details about the wedding events and schedule.</p>
+        <p lang="ko" style="display: none;">결혼식 이벤트 및 일정에 관한 자세한 내용.</p>
+    </section>
+
+    <section id="gallery" >
+        <h2 lang="cn">相册</h2>
+        <h2 lang="en" style="display: none;">Gallery</h2>
+        <h2 lang="ko" style="display: none;">갤러리</h2>
+        <p lang="cn">浏览我们美丽的回忆和瞬间。</p>
+        <p lang="en" style="display: none;">Browse through our beautiful memories and moments.</p>
+        <p lang="ko" style="display: none;">우리 아름다운 기억과 순간을 둘러보세요.</p>
+        <div class="gallery">
+            <div>
+            <span> <img src="images/photo1.JPG" alt="Photo 1" > </span>
+            <span> <img src="images/photo2.jpg" alt="Photo 2" ></span>
+            <span> <img src="images/photo3.jpg" alt="Photo 3" ></span>
+            </div>
+            <div>
+            <span><img src="images/photo4.jpg" alt="Photo 4" ></span>
+            <span><img src="images/photo5.jpg" alt="Photo 5" ></span>
+            <span><img src="images/photo6.jpg" alt="Photo 6" ></span>
+            </div>
+            <div>
+            <span><img src="images/photo7.jpg" alt="Photo 7" ></span>
+            <span><img src="images/photo8.jpg" alt="Photo 8" ></span>
+            <span><img src="images/photo9.jpg" alt="Photo 9" ></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="rsvp">
+        <h2 lang="cn">RSVP</h2>
+        <h2 lang="en" style="display: none;">RSVP</h2>
+        <h2 lang="ko" style="display: none;">참석 응답</h2>
+        <p lang="cn">告诉我们是否会在我们特殊的日子里与我们一起。</p>
+        <p lang="en" style="display: none;">Let us know if you'll be joining us on our special day.</p>
+        <p lang="ko" style="display: none;">우리 특별한 날에 참석할 것인지 알려주세요.</p>
+    </section>
+
+    <section id="contact">
+        <h2 lang="cn">联系我们</h2>
+        <h2 lang="en" style="display: none;">Contact</h2>
+        <h2 lang="ko" style="display: none;">연락처</h2>
+        <p lang="cn">与我们取得联系以获取任何咨询或留言。</p>
+        <p lang="en" style="display: none;">Get in touch with us for any inquiries or messages.</p>
+        <p lang="ko" style="display: none;">문의 사항이나 메시지가있는 경우 연락처를 얻으세요.</p>
+    </section>
+
+    <footer>
+        <p lang="cn">&copy; 2024 悦 & 百基。保留所有权利。</p>
+        <p lang="en" style="display: none;">&copy; 2024 Yue & BaekGi. All rights reserved.</p>
+        <p lang="ko" style="display: none;">&copy; 2024 유에 & 백기. 모든 권리 보유.</p>
+    </footer>
+
+
+    
+    <script>
+        function changeLanguage() {
+            const selectedLanguage = document.getElementById('lang-switch').value;
+
+            // Set lang attribute on the HTML element
+            document.documentElement.lang = selectedLanguage;
+
+            // Update the labels in the wedding location dropdown based on the selected language
+            const labels = document.querySelectorAll('[id^="wedding-location-label-"]');
+
+            labels.forEach(label => {
+                const lang = label.getAttribute('lang');
+                label.style.display = lang === selectedLanguage ? 'inline' : 'none';
+            });
+            // Update the values in the wedding location dropdown based on the selected language
+            const options = document.querySelectorAll('#wedding-location option');
+            
+            options.forEach(option => {
+                 const lang = option.getAttribute('lang');
+                option.style.display = lang === selectedLanguage ? 'block' : 'none';
+            });
+
+            // Hide all elements by default
+            document.querySelectorAll('[lang]').forEach(element => {
+                element.style.display = 'none';
+            });
+
+            // Show elements based on the selected language
+            document.querySelectorAll(`[lang="${selectedLanguage}"]`).forEach(element => {
+                element.style.display = 'block';
+            });
+
+            // Update venue information based on country selection
+            updateVenueInfo();
+        }
+
+        function updateVenueInfo() {
+        const selectedOption = document.getElementById('wedding-location').value;
+        const selectedLanguage = document.getElementById('lang-switch').value;
+
+            console.log(selectedOption);
+            console.log(selectedLanguage);
+        // Hide all venue info elements by default
+        document.querySelectorAll('.venue-cn-cn, .venue-cn-ko, .venue-cn-en, .venue-us-cn, .venue-us-ko, .venue-us-en').forEach(venueElement => {
+            venueElement.style.display = 'none';
+        });
+
+        // Show venue info based on the selected option and language
+        document.querySelectorAll(`.venue-${selectedOption}-${selectedLanguage}`).forEach(venueElement => {
+            venueElement.style.display = 'block';
+        });
+    }
+
+
+    </script>
+
+</body>
+</html>
