@@ -220,5 +220,11 @@ footer {
   .header-photo {
       /* Adjust styles for smaller screens */
       max-width: 100%;
+      
   }
+
+  body {
+    font-size: 14px; /* Adjust the font size for smaller screens */
+}
+
 }
