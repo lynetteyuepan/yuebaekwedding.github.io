@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Wedding</title>
     <link rel="stylesheet" href="styles.css">
     
@@ -11,21 +11,23 @@
     <header>
         
         <!-- text on the top -->
-        <h1 class="header-text" lang="cn">我们要结婚了！</h1>
+        <!-- <h1 class="header-text" lang="cn">我们要结婚了！</h1>
         <h1 class="header-text" lang="en" style="display: none;">We're Getting Married!</h1>
-        <h1 class="header-text" lang="ko" style="display: none;">우리 결혼합니다!</h1>
+        <h1 class="header-text" lang="ko" style="display: none;">우리 결혼합니다!</h1> -->
         <!-- names -->
         <h1 class="header-main-text" lang="cn">潘悦 & 闵百基</h1>
         <h1 class="header-main-text" lang="en" style="display: none;">Yue Pan & BaekGi Min</h1>
         <h1 class="header-main-text" lang="ko" style="display: none;">판유에 & 민백기</h1>
         <!-- date -->
-        <h1 class="header-date" lang="en" style="display: none;">2024 Spring (China) & 2025 Spring (US)</h1>
-        <h1 class="header-date" lang="cn">2024 春 (中国厦门) & 2025 夏 (美国纽约)</h1>
-        <h1 class="header-date" lang="ko" style="display: none;">2024 봄 (중국 샤먼) & 2025 여름 (미국 뉴욕)</h1>
-        <img src="images/header_image2.JPG" alt="Wedding Photo" class="header-photo">
+        <h1 class="header-date" lang="en" style="display: none;">2024 Spring (China)</h1>
+        <h1 class="header-date" lang="cn">2024 春 (中国厦门)</h1>
+        <h1 class="header-date" lang="ko" style="display: none;">2024 봄 (중국 샤먼)</h1>
+        <h1 class="header-date2" lang="en" style="display: none;">2025 Spring (US)</h1>
+        <h1 class="header-date2" lang="cn">2025 夏 (美国纽约)</h1>
+        <h1 class="header-date2" lang="ko" style="display: none;">2025 여름 (미국 뉴욕)</h1>
 
     
-    </header>
+    
 
     <div class="language-switch-container">
         <!-- language switching -->
@@ -42,33 +44,39 @@
             </select>
         </form>
     </div>
+    <!-- Add this inside the header section -->
+    <div class="burger-icon" onclick="toggleNav()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
     <!-- navigation button in different languages -->
     <nav>
-        <a href="#home" lang="cn">首页</a>
-        <a href="#about" lang="cn">关于我们</a>
-        <a href="#events" lang="cn">活动</a>
-        <a href="#gallery" lang="cn">相册</a>
-        <a href="#rsvp" lang="cn">RSVP</a>
-        <a href="#contact" lang="cn">联系我们</a>
+            <a href="#home" lang="cn">首页</a>
+            <a href="#about" lang="cn">关于我们</a>
+            <a href="#events" lang="cn">活动</a>
+            <a href="#gallery" lang="cn">相册</a>
+            <a href="#rsvp" lang="cn">RSVP</a>
+            <a href="#contact" lang="cn">联系我们</a>
 
-        <a href="#home" lang="en" style="display: none;">Home</a>
-        <a href="#about" lang="en" style="display: none;">About Us</a>
-        <a href="#events" lang="en" style="display: none;">Events</a>
-        <a href="#gallery" lang="en" style="display: none;">Gallery</a>
-        <a href="#rsvp" lang="en" style="display: none;">RSVP</a>
-        <a href="#contact" lang="en" style="display: none;">Contact</a>
+            <a href="#home" lang="en" style="display: none;">Home</a>
+            <a href="#about" lang="en" style="display: none;">About Us</a>
+            <a href="#events" lang="en" style="display: none;">Events</a>
+            <a href="#gallery" lang="en" style="display: none;">Gallery</a>
+            <a href="#rsvp" lang="en" style="display: none;">RSVP</a>
+            <a href="#contact" lang="en" style="display: none;">Contact</a>
+            <a href="#home" lang="ko" style="display: none;">홈</a>
+            <a href="#about" lang="ko" style="display: none;">우리에 대해</a>
 
-        <a href="#home" lang="ko" style="display: none;">홈</a>
-        <a href="#about" lang="ko" style="display: none;">우리에 대해</a>
-        <a href="#events" lang="ko" style="display: none;">이벤트</a>
-        <a href="#gallery" lang="ko" style="display: none;">갤러리</a>
-        <a href="#rsvp" lang="ko" style="display: none;">참석 응답</a>
-        <a href="#contact" lang="ko" style="display: none;">연락처</a>
+            <a href="#events" lang="ko" style="display: none;">이벤트</a>
+            <a href="#gallery" lang="ko" style="display: none;">갤러리</a>
+            <a href="#rsvp" lang="ko" style="display: none;">참석 응답</a>
+            <a href="#contact" lang="ko" style="display: none;">연락처</a>
+                
     </nav>
-    
+    </header>   
+    <img src="images/header_image2.JPG" alt="Wedding Photo" class="header-photo">
 
-    <!-- section text -->
-   
     <section id="home">
         <div class="container">
             <!-- Content for the home section based on language -->
@@ -137,35 +145,8 @@
     <section id="about">
         <h2 lang="cn">关于我们</h2>
             <h2 lang="en" style="display: none;">About Us</h2>
-            <h2 lang="ko" style="display: none;">우리에 대해</h2>
-        <div class="left-container">            
-            <div class="flip-box">
-                <div class="flip-box-inner">
-                  <div class="flip-box-front">
-                    <img id="circle_yue" src="images/circle_yue.JPG" alt="Yue" style="width:400px;height:400px">
-                  </div>
-                  <div class="flip-box-back">
-                    <h2 id="about-bride-cn" lang="cn">关于新娘</h2>
-                    <h2 id="about-bride-en" lang="en" style="display: none;">About Yue</h2>
-                    <h2 id="about-bride-ko" lang="ko" style="display: none;">안녕, 제이름은 판유에 입니다</h2>
-                  </div>
-                </div>
-              </div>
-        </div>
-        <div class="right-container">
-
-            <div class="flip-box">
-                <div class="flip-box-inner">
-                  <div class="flip-box-front">
-                    <img id="circle_baekgi"  src="images/circle_min.JPG" alt="BaekGi" style="width:400px;height:400px">
-                  </div>
-                  <div class="flip-box-back">
-                    <h2 id="about-groom-cn" lang="cn">关于新郎</h2>
-            <h2 id="about-groom-en" lang="en" style="display: none;">About BaekGi</h2>
-            <h2 id="about-groom-ko" lang="ko" style="display: none;">안녕, 제이름은 민백기 입니다</h2>
-                  </div>
-                </div>
-              </div>
+            <h2 lang="ko" style="display: none;">우리에 대해</h2> 
+            
     </section>
 
     <section id="events">
@@ -282,7 +263,15 @@
         });
     }
 
-
+        window.addEventListener('resize', function() {
+                changeLanguage();
+                updateVenueInfo();
+            });
+        // Add this inside your <script> tag
+        function toggleNav() {
+        const nav = document.querySelector('nav');
+        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        }
     </script>
 
 </body>
