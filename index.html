@@ -54,7 +54,7 @@
 		<!-- One -->
 			<section id="one" class="main special">
 				<div class="container">
-					<span class="image fit primary"><img src="images/both_hold_flowers.jpg" alt="" /></span>
+					<span class="image fit primary"><img src="images/image20.jpg" alt="" /></span>
 					<div class="content">
 						<div class="venue-cn-cn" lang="cn" style="display: none;">
 							<p>婚礼流程 - 中国</p>
@@ -112,7 +112,7 @@
 		<!-- Two -->
 			<section id="two" class="main special">
 				<div class="container">
-					<span class="image fit primary"><img src="images/Giophotography-240386 copy.jpg" alt="" /></span>
+					<span class="image fit primary"><img src="images/image4.jpg" alt="" /></span>
 					<div class="content">
 						<div class="about-cn" lang="en">
 							<h2 lang="cn" style="display: none;">关于我们</h2>
@@ -158,15 +158,54 @@
 
 			<section id="three" class="main special">
 				<div class="container">
-					<span class="image fit primary"><img src="images/Giophotography-240377 copy.jpg" alt="" /></span>
+					
+					<h1 lang="cn" style="display: none;">相册</h1>
+					<h1 lang="en" >Gallery</h1>
+					<h1 lang="ko" style="display: none;">갤러리</h1>
+					<!-- <span class="image fit primary"><img src="images/image13.jpg" alt="" /></span> -->
 					<div class="content">
-						<h2 lang="cn" style="display: none;">相册（即将上线）</h2>
-						<h2 lang="en" >Gallery (Coming Soon)</h2>
-						<h2 lang="ko" style="display: none;">갤러리 (곧 온다)</h2>
-						<p lang="cn" style="display: none;">浏览我们美丽的回忆和瞬间。</p>
-						<p lang="en" >Browse through our beautiful memories and moments.</p>
-						<p lang="ko" style="display: none;">우리 아름다운 기억과 순간을 둘러보세요.</p>
+						
 					</div>
+					<!-- white photos -->
+					<div class="slideshow-container">
+						<div class="mySlides1">
+							<img src="images/image18.jpg" style="width:100%">
+							</div>
+						<div class="mySlides1">
+								<img src="images/image16.jpg" style="width:100%">
+						</div>
+						
+						<div class="mySlides1">
+								<img src="images/image1.jpg" style="width:100%">
+						</div>
+
+						<div class="mySlides1">
+							<img src="images/image13.jpg" style="width:100%">
+						</div>
+
+						
+						
+					<!-- black photos -->
+						<div class="mySlides1">
+							<img src="images/image10.jpg" style="width:100%">
+						</div>
+
+						<div class="mySlides1">
+						<img src="images/image3.jpg" style="width:100%">
+						</div>
+						
+						<div class="mySlides1">
+							<img src="images/image19.jpg" style="width:100%">
+							</div>
+						
+
+
+					<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  					<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+					
+					
+	
+	</div>
 				</div>
 				<a href="#footer" class="goto-next scrolly">Next</a>
 			</div>
@@ -322,9 +361,27 @@
 		
 				window.addEventListener('resize', function() {
 						changeLanguage();
-						updateVenueInfo();
-						updateAboutUs();
 					});
+
+					let slideIndex = [1,1];
+					let slideId = ["mySlides1"]
+					showSlides(1, 0);
+					showSlides(1, 1);
+
+					function plusSlides(n, no) {
+					showSlides(slideIndex[no] += n, no);
+					}
+
+					function showSlides(n, no) {
+					let i;
+					let x = document.getElementsByClassName(slideId[no]);
+					if (n > x.length) {slideIndex[no] = 1}    
+					if (n < 1) {slideIndex[no] = x.length}
+					for (i = 0; i < x.length; i++) {
+						x[i].style.display = "none";  
+					}
+					x[slideIndex[no]-1].style.display = "block";  
+					}
 			</script>
 		
 	</body>
