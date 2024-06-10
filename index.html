@@ -54,42 +54,27 @@
 		<!-- One -->
 			<section id="one" class="main special">
 				<div class="container">
-					<span class="image fit primary"><img src="images/wd_1.JPG" alt="wedding day photo1" /></span>
+					
 					<div class="content">
 						<div class="venue-cn-cn" lang="cn" style="display: none;">
-							<p>在2024年4月12日， 我们在亲人朋友的祝福下，在厦门举办了婚礼</p>
+							<p>人生漫漫，我们来日方长。</p>
 
 						</div>
+						
 						<div class="venue-cn-ko" lang="ko" style="display: none;">
-							<p>2024년 4월 12일, 친척과 친구들의 축복 속에 샤먼에서 결혼식을 올렸습니다.</p>
+							<p>사랑, 웃음, 그리고 영원히 행복하게</p>
 						</div>
+						
 						<div class="venue-cn-en" lang="en">
-							<p>On April 12, 2024, with the blessings of relatives and friends, we held our wedding in Xiamen</p>
-						</div>
-						<video class="video" controls>
-							<source src="video/wd_video.MP4" type="video/mp4">
-							<source src="video/wd_video.MP4" type="video/ogg">
-							Your browser does not support the video tag.
-						  </video>
-						<!-- <div class="venue-us-cn" lang="cn" style="display: none;">
-							<p>美国婚礼信息：</p>
-							<p>日期：2025 夏</p>
-							<p>地点：纽约, 美国</p>
-						</div>
-						<div class="venue-us-ko" lang="ko" style="display: none;">
-							<p>중국결혼정보:</p>
-							<p>날짜: 2025 여름에</p>
-							<p>장소: 뉴욕, 미국</p>
-						</div>
-						<div class="venue-us-en" lang="en" style="display: none;">
-							<p>Wedding in US Information:</p>
-							<p>Date: 2025 Summer</p>
-							<p>Venue: New York, US</p> -->
+							<p>Love, laughter, and a happily ever after.</p>
 						</div>
 					</div>
+					<div class="video-container">
+						<iframe src="https://www.youtube.com/embed/zsFvtWtnHOM" frameborder="0" allowfullscreen></iframe>
 					</div>
-					<a href="#two" class="goto-next scrolly">Next</a>
 				</div>
+				
+					<a href="#two" class="goto-next scrolly">Next</a>
 			</section>
 
 		<!-- Two -->
@@ -97,7 +82,7 @@
 				<div class="container">
 					
 					  <div class="content">
-						<div class="about-cn" lang="en">
+						<div class="about-cn" lang="cn">
 							<h2 lang="cn" style="display: none;">关于我们</h2>
 							<p lang="cn" style="display: none;">2021年6月，我们初见于炎热夏天里，这是我们故事的开始。
 								在接下来的一年时间里，我们的周末奔波于两座城市之间，
@@ -132,11 +117,9 @@
 							</p>
 						</div>
 					</div>
-					<video class="video" controls>
-						<source src="video/pre_wed.mov" type="video/mp4">
-						<source src="video/pre_wed.mov" type="video/ogg">
-						Your browser does not support the video tag.
-					  </video>
+					<div class="video-container">
+						<iframe src="https://www.youtube.com/embed/D2JlbHNVmgM" frameborder="0" allowfullscreen></iframe>
+					</div>
 					<a href="#three" class="goto-next scrolly">Next</a>
 				</div>
 			</section>
@@ -170,13 +153,10 @@
 						<div class="mySlides1">
 								<img src="images/image1.jpg" style="width:100%">
 						</div>
-
 						<div class="mySlides1">
 							<img src="images/image13.jpg" style="width:100%">
 						</div>
 
-						
-						
 					<!-- black photos -->
 						<div class="mySlides1">
 							<img src="images/image10.jpg" style="width:100%">
@@ -185,11 +165,9 @@
 						<div class="mySlides1">
 						<img src="images/image3.jpg" style="width:100%">
 						</div>
-						
 						<div class="mySlides1">
-							<img src="images/image19.jpg" style="width:100%">
+						<img src="images/image19.jpg" style="width:100%">
 						</div>
-						
 
 
 					<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
@@ -334,6 +312,22 @@
 					}
 					x[slideIndex[no]-1].style.display = "block";  
 					}
+			const targetDate = new Date('2021-06-20');
+
+			// Update the counter every second
+			setInterval(function() {
+			// Get the current date
+			const currentDate = new Date();
+
+			// Calculate the difference in milliseconds
+			const timeDiff = currentDate.getTime() - targetDate.getTime();
+
+			// Convert the difference to days
+			const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+			// Update the counter element
+			document.getElementById('daysCounter').textContent = daysDiff;
+			}, 1000); // Update every second (1000 milliseconds)
 			</script>
 		
 	</body>

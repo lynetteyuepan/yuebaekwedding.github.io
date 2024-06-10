@@ -285,7 +285,15 @@ input, select, textarea {
 		.container.max {
 			width: 100%;
 		}
+		@media screen and (min-width: 981px) {
 
+			.container {
+				width: 80% !important;
+				max-width: 100% !important;
+			}
+			
+
+		}
 		@media screen and (max-width: 980px) {
 
 			.container {
@@ -2259,14 +2267,23 @@ input, select, textarea {
 			.icon.major:before {
 				font-size: 2.5em;
 			}
-/* video */
+/* Then style the iframe to fit in the container div with full height and width */
+	.video-container {
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 aspect ratio (divide 9 by 16 = 0.5625) */
+		height: 0;
+		overflow: hidden;
+	}
+	
+	.video-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
 
-	.video {
-				border: 0;
-				display: inline-block;
-				position: relative;
-				width: 100%;
-			}
+
 /* Image */
 
 	.image {
@@ -2797,7 +2814,7 @@ input, select, textarea {
 		}
 
 			.main .container:before {
-				min-height: calc( 100vh - 13em);
+				min-height: calc( 100vh - 50em);
 				content: '';
 				display: inline-block;
 				vertical-align: middle;
